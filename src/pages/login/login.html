@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title >Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding="true" class="myview">
+
+  <div class="profile-image">
+      <img src="assets/imgs/f2.png" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+
+  </div>
+  <form (ngSubmit)="login()" [formGroup]="authForm" >
+      
+    <ion-item style="background:none;">
+      <ion-input type="text" placeholder="Email" formControlName="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item style="background:none;">
+      <ion-input type="password" placeholder="Mot de passe" formControlName="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+
+  <button  type="submit" style="margin-top: 15px;height: 35px;font-size: 14px;background: rgb(90, 88, 88);" ion-button  block  (click)="login()"> <ion-icon ios="ios-log-in" md="md-log-in">  Connexion</ion-icon></button>
+  <button  type="submit" style="margin-top: 15px;height: 35px;font-size: 14px;"color="danger" ion-button  block (click)="register()"> <ion-icon ios="ios-log-in" md="md-log-in">  Enregistrer</ion-icon></button>
+
+</form>
+</ion-content>

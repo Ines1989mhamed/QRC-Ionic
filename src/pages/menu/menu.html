@@ -1,0 +1,27 @@
+
+
+<ion-content padding="true" class="myview">
+  <div class="spacer" style="width: 300px; height: 9px;"></div>
+  <div>
+    <img src="assets/imgs/f3.png" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+  </div>
+ 
+    <div style="width: 300px; height: 30px;"></div>
+    <button (click)="bonEntree()" ion-button block style="background-color: #A9A9A9 ">
+        <ion-icon ios="ios-download" md="md-download">  Bon d'entrée</ion-icon>
+    </button>
+    <button (click)="bonSortie()" ion-button block   style="background-color: #ce4545" >
+        <ion-icon ios="ios-share-alt" md="md-share-alt">  Bon de sortie </ion-icon>
+    </button>
+    <button (click)="bonRetour()" ion-button block  style="background-color: #696969">
+        <ion-icon ios="ios-undo" md="md-undo">   Bon de retour</ion-icon>
+    </button>
+    <button (click)="bonRetour()" ion-button block color="dark">
+            <ion-icon ios="ios-create" md="md-create">  Réservation</ion-icon>
+        </button>
+   
+    <button (click)="deconncter()" ion-button block color="danger">
+        <ion-icon ios="ios-log-out" md="md-log-out">  Déconnecter</ion-icon>
+    </button>
+  
+</ion-content>

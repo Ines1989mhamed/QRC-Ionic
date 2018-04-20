@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title> Fiche de bon de retour</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding="true" class="myview">
+  <ion-label>Veuillez remplir la fiche !</ion-label>
+  <ion-item>
+    <ion-input type="text" placeholder="Saisir votre nom"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Saisir votre prénom"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Saisir le matricule de la voiture"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Saisir le nom du client"  ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Quel evennement ?"  ></ion-input>
+  </ion-item>
+  <button ion-button block style="background-color: rgb(80, 78, 78)"><ion-icon ios="ios-send" md="md-send">  Envoyer</ion-icon></button>
+  <button ion-button block color="danger" > <ion-icon name="backspace" (click)="retour()"> Annuler</ion-icon></button>
+</ion-content>

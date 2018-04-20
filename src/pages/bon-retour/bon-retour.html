@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title> Bon de retour</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding="true" class="myview">
+  <ion-label>Veuillez scanner le code du produit !</ion-label>
+  <button ion-button (click)="scan()" block><ion-icon name="qr-scanner" > Scan</ion-icon> </button>
+
+  <ion-item>
+    <ion-input type="text" placeholder="Produit" [(ngModel)]="scanData.text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" placeholder="Quantité" [(ngModel)]="scanData.Quantite"></ion-input>
+  </ion-item>
+  <button ion-button (click)="valider()"  style="background-color: rgb(141, 135, 135)" block><ion-icon ios="ios-add" md="md-add">  Ajouter</ion-icon></button>
+  <ion-label>Liste des produits :</ion-label>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-5>Produit</ion-col>
+      <ion-col col-4>Quantité</ion-col>
+      <ion-col col-3>Action</ion-col>
+    </ion-row>
+      <ion-row *ngFor="let produit of Fiche.LignesProduit">
+        <ion-col col-5> {{produit.Produit_Id}}</ion-col>
+        <ion-col col-4>{{produit.Quantite}}</ion-col>
+        <ion-col col-3><a (click)="delete(produit.Produit_Id)"><ion-icon name="trash" color="danger"></ion-icon></a></ion-col>
+      </ion-row>
+  </ion-grid>
+  
+  <button ion-button block style="background-color: rgb(80, 78, 78)" (click)="sauvegarder()"><ion-icon ios="ios-send" md="md-send">  Envoyer</ion-icon></button>
+  <button ion-button block color="danger" (click)="retour()"> <ion-icon name="backspace"> Annuler</ion-icon></button>
+</ion-content>
